@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parassol Energia Solar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Parassol Energia Solar ☀️</h1>
+    <div class="form">
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" autocomplete="off" />
+      
+      <label for="kwh">Consumo (kWh):</label>
+      <input type="number" id="kwh" min="0" />
+
+      <label for="potencia">Potência módulo (Wp):</label>
+      <select id="potencia">
+        <option value="595">595 Wp</option>
+        <option value="700" selected>700 Wp</option>
+      </select>
+
+      <button id="calcular">Calcular</button>
+      <button id="resetar">Resetar</button>
+
+
+      <div id="inversor-box" class="hidden">
+        <label for="inversor">Escolha um inversor:</label>
+        <select id="inversor"></select>
+      </div>
+    </div>
+
+    <div class="result">
+      <div class="box">
+        <h2>Resultado Original</h2>
+        <pre id="original"></pre>
+      </div>
+      <div class="box">
+        <h2>Resultado Personalizado</h2>
+        <pre id="personalizado"></pre>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
