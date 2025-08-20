@@ -1,4 +1,4 @@
-# 🔆 Parassol Energia — Calculadora de Sistemas Solares
+# Calculadora de Sistemas Solares
 
 Ferramenta interativa desenvolvida em **Python** para **dimensionar sistemas fotovoltaicos** de forma prática, precisa e automatizada.
 
